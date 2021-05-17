@@ -1,9 +1,12 @@
 package hhu.edu.cn.domain;
 
+import java.util.List;
+
 public class Teacher {
     private int id;
     private String tea_name;
     private String tea_password;
+    private List<Tea_Class> classes;
 
     public int getId() {
         return id;
@@ -29,12 +32,21 @@ public class Teacher {
         this.tea_password = tea_password;
     }
 
+    public List<Tea_Class> getClasses() {
+        return classes;
+    }
+
+    public void setClasses(List<Tea_Class> classes) {
+        this.classes = classes;
+    }
+
     @Override
     public String toString() {
         return "Teacher{" +
                 "id=" + id +
                 ", tea_name='" + tea_name + '\'' +
                 ", tea_password='" + tea_password + '\'' +
+                ", classes=" + classes +
                 '}';
     }
 }
